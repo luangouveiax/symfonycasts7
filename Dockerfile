@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install gd mysqli pdo pdo_mysql opcache \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
+    && pecl install apcu \
+    && docker-php-ext-enable apcu \
     && a2enmod rewrite
 
 # Verifique onde o Xdebug foi instalado e crie os arquivos de configuração
