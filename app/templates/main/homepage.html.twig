@@ -1,31 +1,21 @@
-<h1>
-    Naves estelares: sua opção de acabar com o monopólio de peças espaciais!
-</h1>
+{% extends 'base.html.twig' %}
 
-<div>
-    Navegue por {{ numberOfStarships * 10 }} naves espaciais!
+{% block title %}Naves estelares: Transmita algumas peças!{% endblock %}
 
-    {% if numberOfStarships > 400 %}
-        <p>
-            Isso é um monte de naves!
-        </p>
-    {% endif %}
-</div>
-
-<div>
+{% block body %}
     <h2>Minha Nave</h2>
 
     <table>
         <tr>
-            <th>Nome</th>
+            <th>Name</th>
             <td>{{ minhaNave.name }}</td>
         </tr>
         <tr>
-            <th>Classe</th>
+            <th>Class</th>
             <td>{{ minhaNave.class }}</td>
         </tr>
         <tr>
-            <th>Capitão</th>
+            <th>Captain</th>
             <td>{{ minhaNave.captain|upper|lower|title }}</td>
         </tr>
         <tr>
@@ -34,3 +24,4 @@
         </tr>
     </table>
 </div>
+{% endblock %}
