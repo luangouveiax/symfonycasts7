@@ -1,2 +1,3 @@
-# symfonycasts7
-Projeto desenvolvido no curso Cosmic Coding with Symfony 7 (SymfonyCasts)
+Projeto desenvolvido no curso Harmonious Development with Symfony 6
+
+Perfil no SymfonyCasts: https://symfonycasts.com/u/luangouveiax
