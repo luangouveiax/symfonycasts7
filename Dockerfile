@@ -22,6 +22,9 @@ RUN echo "zend_extension=$(find /usr/local/lib/php/extensions -name xdebug.so)" 
     && echo "xdebug.client_port=9003" >> /usr/local/etc/php/conf.d/20-xdebug.ini \
     && echo "xdebug.log=/tmp/xdebug.log" >> /usr/local/etc/php/conf.d/20-xdebug.ini
 
+# Configure Apache para usar o diretório "public" como raiz
+RUN echo 'DocumentRoot /var/www/html/public' > /etc/apache2/sites-available/000-default.conf
+
 # Definir o diretório de trabalho no container
 WORKDIR /var/www/html
 
