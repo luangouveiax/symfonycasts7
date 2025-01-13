@@ -39,4 +39,15 @@ class NaveRepository
             ),
         ];
     }
+
+    public function find(int $id): ?Nave
+    {
+        foreach ($this->findAll() as $nave) {
+            if ($nave->getId() === $id) {
+                return $nave;
+            }
+        }
+        
+        return null;
+    }
 }
