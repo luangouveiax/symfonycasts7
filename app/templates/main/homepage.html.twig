@@ -3,19 +3,32 @@
 {% block title %}Naves estelares: Transmita algumas peças!{% endblock %}
 
 {% block body %}
+<h1>
+    Naves estelares: sua opção de acabar com o monopólio de peças espaciais!
+</h1>
+<div>
+    Navegue por {{ naves|length * 10 }} naves!
+    {% if naves|length > 2 %}
+        <p>
+            Isso é um monte de naves!
+        </p>
+    {% endif %}
+</div>
+
+<div>
     <h2>Minha Nave</h2>
 
     <table>
         <tr>
-            <th>Name</th>
+            <th>Nome</th>
             <td>{{ minhaNave.name }}</td>
         </tr>
         <tr>
-            <th>Class</th>
+            <th>Classe</th>
             <td>{{ minhaNave.class }}</td>
         </tr>
         <tr>
-            <th>Captain</th>
+            <th>Capitão</th>
             <td>{{ minhaNave.captain|upper|lower|title }}</td>
         </tr>
         <tr>

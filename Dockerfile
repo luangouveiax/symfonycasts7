@@ -8,12 +8,14 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libmariadb-dev-compat \
     git \
+    libicu-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd mysqli pdo pdo_mysql opcache \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && pecl install apcu \
     && docker-php-ext-enable apcu \
+    && docker-php-ext-install intl \
     && a2enmod rewrite
 
 # Verifique onde o Xdebug foi instalado e crie os arquivos de configuração
