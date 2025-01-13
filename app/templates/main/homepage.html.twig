@@ -1,0 +1,36 @@
+<h1>
+    Naves estelares: sua opção de acabar com o monopólio de peças espaciais!
+</h1>
+
+<div>
+    Navegue por {{ numberOfStarships * 10 }} naves espaciais!
+
+    {% if numberOfStarships > 400 %}
+        <p>
+            Isso é um monte de naves!
+        </p>
+    {% endif %}
+</div>
+
+<div>
+    <h2>Minha Nave</h2>
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <td>{{ minhaNave.name }}</td>
+        </tr>
+        <tr>
+            <th>Classe</th>
+            <td>{{ minhaNave.class }}</td>
+        </tr>
+        <tr>
+            <th>Capitão</th>
+            <td>{{ minhaNave.captain|upper|lower|title }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ minhaNave.status }}</td>
+        </tr>
+    </table>
+</div>
