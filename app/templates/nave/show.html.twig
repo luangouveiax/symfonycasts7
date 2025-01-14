@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ nave.name }}{% endblock %}
+
+{% block body %}
+    <h1>{{ nave.name }}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Classe</th>
+                <td>{{ nave.class }}</td>
+            </tr>
+             <tr>
+                <th>Capitão</th>
+                <td>{{ nave.captain }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

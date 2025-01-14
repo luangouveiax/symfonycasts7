@@ -21,7 +21,11 @@
     <table>
         <tr>
             <th>Nome</th>
-            <td>{{ minhaNave.name }}</td>
+            <td>
+                <a href="{{ path('app_nave_show', { id: minhaNave.id }) }}">
+                    {{ minhaNave.name }}
+                </a>
+            </td>
         </tr>
         <tr>
             <th>Classe</th>
